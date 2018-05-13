@@ -16,13 +16,13 @@ public protocol ActivityViewable: NVActivityIndicatorViewable {
     
 }
 
-extension ActivityViewable where Self: UIViewController {
+public extension ActivityViewable where Self: UIViewController {
     
-    public func showActivity() {
+    func showActivity() {
         startAnimating()
     }
     
-    public func hideActivity() {
+    func hideActivity() {
         stopAnimating()
     }
     
