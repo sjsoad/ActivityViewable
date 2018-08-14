@@ -9,14 +9,14 @@
 import Foundation
 import NVActivityIndicatorView
 
-public protocol ActivityViewable: NVActivityIndicatorViewable {
+public protocol ActivityViewable: NVActivityIndicatorViewable where Self: UIViewController {
     
     func showActivity()
     func hideActivity()
     
 }
 
-public extension ActivityViewable where Self: UIViewController {
+public extension ActivityViewable {
     
     func showActivity() {
         startAnimating()
